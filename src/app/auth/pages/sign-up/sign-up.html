@@ -1,21 +1,35 @@
-<section class="h-screen bg-red-400 ">
-    <div class="">
-        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" >
-            <label for="first-name"> First Name : </label>
-            <input id="first-name" type="text" formControlName="firstName"/>
+<section class="h-screen justify-center flex flex-col items-center px-8">
+    <div class="justify-center border-2 flex flex-row">
+        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="">
+            <div class="mt-4 text-center ">
+                <h1>Sign Up</h1>
+            </div>
 
-            <label for="last-name"> Last Name : </label>
-            <input id="last-name" type="text" formControlName="LastName"/>
+            <div  class="flex flex-col p-2">
+                <label for="first-name"> First Name : </label>
+                <input id="first-name" type="text" formControlName="firstName"/>
+            </div>
 
-            <label for="email"> Email : </label>
-            <input id="email" type="email" formControlName="Email"/>
+            <div class="flex flex-col p-2">
+                <label for="last-name"> Last Name : </label>
+                <input id="last-name" type="text" formControlName="lastName"/>
+            </div>
 
-            <label for="password"> First Name : </label>
-            <input id="password" type="password" formControlName="password"/>
+            <div class="flex flex-col p-2">
+                <label for="email"> Email : </label>
+                <input id="email" type="email" formControlName="email"/>
+            </div>
 
-            <button type="submit" [disabled]="!signUpForm.valid">
-                Submit
-            </button>
+            <div class="flex flex-col p-2">
+                <label for="password"> Password </label>
+                <input id="password" type="password" formControlName="password"/>
+            </div>
+
+            <div class="flex flex-col p-2">
+                <button type="submit" [disabled]="!signUpForm.valid">
+                    Submit
+                </button>
+            </div>
 
         </form>
     </div>
